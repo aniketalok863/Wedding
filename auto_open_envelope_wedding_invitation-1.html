@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Wedding Invitation — Aniket & Priya</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden}
+body{background:#0d0908;font-family:Georgia,serif;color:#f7e5bd}
+#app{height:100dvh;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 20%,#65472d,#24160f 48%,#0d0908)}
+#intro{position:absolute;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;transition:opacity 1s ease,visibility 1s}
+#intro.hide{opacity:0;visibility:hidden}
+.env{width:min(88vw,390px);height:260px;position:relative;perspective:900px;filter:drop-shadow(0 30px 35px #0009)}
+.paper{position:absolute;z-index:2;left:8%;top:7%;width:84%;height:88%;background:#fff7e5;color:#3a281d;box-shadow:0 10px 25px #0006;display:flex;align-items:center;justify-content:center;transform:translateY(8px);transition:transform 1.6s cubic-bezier(.15,.8,.2,1)}
+.paper .inner{width:88%;height:88%;border:1px solid #c8a264;text-align:center;padding:15px;display:flex;flex-direction:column;justify-content:center}
+.paper small{font:9px Arial;letter-spacing:4px;text-transform:uppercase}.paper h1{font-weight:400;font-size:30px;margin:12px 0 4px}
+.envelope{position:absolute;inset:0;background:linear-gradient(145deg,#d6b889,#987044);border-radius:6px;overflow:hidden;z-index:3}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 49.7%,#77542f55 50%,transparent 50.4%),linear-gradient(45deg,transparent 49.7%,#77542f44 50%,transparent 50.4%)}
+.flap{position:absolute;z-index:5;left:0;right:0;top:0;height:65%;background:linear-gradient(155deg,#ead3a8,#b78c5b);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;animation:flap 1.8s cubic-bezier(.2,.75,.2,1) 1.4s forwards}
+@keyframes flap{to{transform:rotateX(180deg)}}
+.paper{animation:paper 2s cubic-bezier(.15,.8,.2,1) 1.7s forwards}
+@keyframes paper{to{transform:translateY(-185px)}}
+.seal{position:absolute;z-index:7;left:50%;top:55%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,#a72e29,#601412);border:3px solid #d5ad6b;color:#f7d99a;font-size:17px;animation:seal 1.2s ease 3.05s forwards}
+@keyframes seal{to{opacity:0;transform:translate(-50%,-50%) scale(.5)}}
+.opening-text{position:absolute;bottom:-58px;left:0;right:0;text-align:center;font:10px Arial;letter-spacing:2px;animation:fade 1s ease 3.2s forwards;opacity:0}
+@keyframes fade{to{opacity:.8}}
+#main{position:absolute;inset:0;opacity:0;transform:scale(.97);transition:opacity 1s 3.8s,transform 1s 3.8s;pointer-events:none}
+#main.show{opacity:1;transform:none;pointer-events:auto}
+.slides{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;scroll-behavior:smooth}
+.slide{height:100dvh;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;text-align:center;padding:35px 26px;position:relative}
+.slide:after{content:"";position:absolute;inset:20px;border:1px solid #d2aa6a66;border-radius:22px}
+.content{max-width:390px;z-index:2}.eyebrow{font:10px Arial;letter-spacing:4px;text-transform:uppercase;color:#dfbd7e}
+h2{font-size:42px;font-weight:400;line-height:1.08;color:#f8dfab;margin:17px 0}
+.names{font-size:40px;color:#fff0c9;margin:18px 0}.amp{font-size:18px;color:#d2a25b}
+.line{width:75px;height:1px;background:#caa060;margin:18px auto}
+p{font:15px/1.7 Arial;color:#e9dcc9}
+.event{padding:17px;border:1px solid #cda46666;border-radius:14px;background:#0003;margin:18px 0}
+.event b{font:12px Arial;color:#f0cd8e}.event span{display:block;font:13px Arial;margin-top:7px;color:#e7d8c5}
+.btn{display:inline-block;padding:12px 20px;border:1px solid #d2aa67;border-radius:30px;color:#f3d59b;text-decoration:none;font:11px Arial;letter-spacing:1.5px;margin-top:14px}
+.swipe{position:absolute;bottom:25px;font:10px Arial;letter-spacing:2px;color:#d8c5a8}
+.flower{position:absolute;opacity:.22;font-size:28px}.a{top:10%;left:9%}.b{bottom:15%;right:8%}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="intro">
+    <div class="env">
+      <div class="paper"><div class="inner"><small>Wedding Invitation</small><h1>Aniket & Priya</h1><div class="line"></div><small>19 January 2027</small></div></div>
+      <div class="envelope"></div><div class="flap"></div><div class="seal">A ♥ P</div>
+      <div class="opening-text">OPENING YOUR INVITATION…</div>
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="slides">
+      <section class="slide"><span class="flower a">✿</span><span class="flower b">❀</span><div class="content">
+        <div class="eyebrow">Together with their families</div><h2>Two hearts.<br>One forever.</h2>
+        <div class="names">Aniket <span class="amp">&</span> Priya</div><div class="line"></div>
+        <p>Request the pleasure of your company<br>as we begin our beautiful journey together.</p><p style="color:#d7b16b">19 • 01 • 2027</p>
+      </div><div class="swipe">SWIPE UP ↑</div></section>
+
+      <section class="slide"><div class="content"><div class="eyebrow">The Celebrations</div><h2>Mehendi</h2><div class="line"></div>
+        <div class="event"><b>17 JANUARY 2027</b><span>6:00 PM onwards</span><span>Sharma Residence</span></div><p>An evening of colour, laughter, music and beautiful memories.</p>
+      </div><div class="swipe">SWIPE UP ↑</div></section>
+
+      <section class="slide"><div class="content"><div class="eyebrow">The Celebrations</div><h2>Sangeet</h2><div class="line"></div>
+        <div class="event"><b>18 JANUARY 2027</b><span>7:00 PM onwards</span><span>Royal Palace Banquet</span></div><p>Come dance with us as our families celebrate the beginning of forever.</p>
+      </div><div class="swipe">SWIPE UP ↑</div></section>
+
+      <section class="slide"><div class="content"><div class="eyebrow">The Wedding</div><h2>The Big Day</h2><div class="line"></div>
+        <div class="event"><b>19 JANUARY 2027</b><span>7:30 PM</span><span>Royal Palace Banquet</span></div><p>Your presence and blessings mean the world to us.</p>
+      </div><div class="swipe">SWIPE UP ↑</div></section>
+
+      <section class="slide"><div class="content"><div class="eyebrow">Save the location</div><h2>Royal Palace</h2><div class="line"></div>
+        <p>123 Celebration Road<br>New Delhi, India</p><a class="btn" href="https://maps.google.com/" target="_blank">OPEN MAP</a>
+      </div><div class="swipe">SWIPE UP ↑</div></section>
+
+      <section class="slide"><div class="content"><div class="eyebrow">With all our love</div><h2>We can't wait<br>to celebrate<br>with you.</h2><div class="line"></div>
+        <p>Join us for the beginning of our forever.</p><a class="btn" href="https://forms.google.com/" target="_blank">RSVP</a>
+      </div></section>
+    </div>
+  </div>
+</div>
+<script>
+setTimeout(()=>{document.getElementById('intro').classList.add('hide');document.getElementById('main').classList.add('show')},5200);
+</script>
+</body>
+</html>
